@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>My Road! - Dhaka Auto Chaos</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@600;800&family=Bungee&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+  <div id="stage">
+    <div id="frame">
+      <canvas id="cv"></canvas>
+
+      <div id="title" class="ov show">
+        <div class="card">
+          <h1>MY ROAD!</h1>
+          <div class="bn">আমার রাস্তা</div>
+          <p>You drive an auto-rickshaw through Dhaka traffic. Wrong-way driving, honking and near misses earn <b>chaos points</b>. But every bump makes the public angrier, and angry people carry sticks.</p>
+          <ul>
+            <li><kbd>←</kbd> <kbd>→</kbd> steer &nbsp; <kbd>↑</kbd> <kbd>↓</kbd> speed</li>
+            <li><kbd>Space</kbd> honk (scatters people, shifts cars)</li>
+            <li><kbd>P</kbd> pause &nbsp; (phone: on-screen buttons)</li>
+          </ul>
+          <p><b>Don't get caught.</b></p>
+          <button class="go" id="startBtn">START DRIVING</button>
+        </div>
+      </div>
+
+      <div id="over" class="ov"></div>
+    </div>
+  </div>
+
+  <div id="pad">
+    <div class="grp"><button data-k="left">◀</button><button data-k="right">▶</button></div>
+    <button id="hk" data-k="honk">📢<span>HONK</span></button>
+    <div class="grp"><button data-k="down">▼</button><button data-k="up">▲</button></div>
+  </div>
+</div>
+
+<!-- Game modules: order matters (each one uses the ones above it) -->
+<script src="js/config.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/state.js"></script>
+<script src="js/input.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/projection.js"></script>
+<script src="js/spawn.js"></script>
+<script src="js/update.js"></script>
+<script src="js/sprites.js"></script>
+<script src="js/render.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
